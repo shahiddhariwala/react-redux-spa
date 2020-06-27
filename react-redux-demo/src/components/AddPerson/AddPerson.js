@@ -1,6 +1,9 @@
 import React from 'react';
-const addPerson = () => {
-    return ( <button>Add Person</button> );
+import "./AddPerson.css";
+const addPerson = (props) => {
+    return ( <div className="AddPerson-btn" onClick={props.clicked}>
+    Add Person
+</div> );
 }
  
 export default addPerson;
