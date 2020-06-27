@@ -26,13 +26,25 @@ class Persons extends Component {
     });
   };
 
-  personDeleteHandler = () => {};
+  personDeleteHandler = (personId) => {
+    this.setState((prevState) => {
+      return { persons: prevState.persons.filter((per) => per.id != personId) };
+    });
+  };
   render() {
     return (
       <div className={classes.Persons}>
         <AddPerson clicked={this.personAddHandler} />
         {this.state.persons.map((person) => {
-          return <Person key={person.id} name={person.name} age={person.age} />;
+          return (
+            <Person
+              key={person.id}
+              id={person.id}
+              name={person.name}
+              age={person.age}
+              clicked={() => this.personDeleteHandler(person.id)}
+            />
+          );
         })}
       </div>
     );

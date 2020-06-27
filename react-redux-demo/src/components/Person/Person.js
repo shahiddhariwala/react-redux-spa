@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './person.module.css';
 
 const person = (props) => {
-    return (  <div className={classes.Person}>
+    return (  <div className={classes.Person} onClick={props.clicked}>
         <p className={classes.name}>{props.name}</p>
     <p className={classes.age}>Age: {props.age}</p>
     </div>);
