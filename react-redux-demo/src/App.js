@@ -1,10 +1,11 @@
 import React from 'react';
+import Persons from './containers/Persons';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello Redux</h1>
+     <Persons/>
     </div>
   );
 }
