@@ -16,11 +16,13 @@ const reducer = (state = initialState, action) => {
         age: Math.floor(Math.random() * Math.floor(100)),
       };
       return {
+          ...state,
         persons: state.persons.concat(newPerson),
       };
 
     case "DELETE_PERSON":
       return {
+        ...state,
         persons: state.persons.filter((per) => per.id !== action.personId),
       };
     default:
