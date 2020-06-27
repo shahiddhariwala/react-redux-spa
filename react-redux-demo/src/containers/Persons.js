@@ -28,7 +28,7 @@ class Persons extends Component {
 
   personDeleteHandler = (personId) => {
     this.setState((prevState) => {
-      return { persons: prevState.persons.filter((per) => per.id != personId) };
+      return { persons: prevState.persons.filter((per) => per.id !== personId) };
     });
   };
   render() {
